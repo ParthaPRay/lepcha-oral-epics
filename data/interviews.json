@@ -172,25 +172,6 @@
   },
   {
     "id": "lepcha-010",
-    "narrator": "Dukda Lepcha (Bongthing)",
-    "topic": "Ruya",
-    "narrativeType": "oral folklore",
-    "themes": ["folklore"],
-    "interviewBy": "Yongmit Lepcha",
-    "location": "Gangtok, Sikkim",
-    "mapLabel": "Gangtok — generalised point",
-    "latitude": 27.3389,
-    "longitude": 88.6065,
-    "coordinatePrecision": "approximate",
-    "locationNote": "This is a generalised Gangtok-area map point, not a precise interview site or the narrator's home. Confirm or replace it before publication if the project has a consented location.",
-    "mediaType": "Video interview",
-    "videoUrl": "https://www.youtube.com/watch?v=ASKMfBrUmmc&list=PLOD4VwvSJlnM&index=4",
-    "videoLinkNote": "Direct YouTube watch link; playlist index preserved.",
-    "contextNote": "This is the folklore behind the name of Rey Village in East Sikkim. Dukda Lepcha (Bongthing) recounts that Rey was once full of Calamus plants, which gradually disappeared. The name Ruya refers to this plant: ‘Ru’ means the Calamus plant and ‘Ya’ means vanishing. The name later became Rey through changes in pronunciation. The account documents this disappearing local folklore.",
-    "status": "published"
-  },
-  {
-    "id": "lepcha-011",
     "narrator": "Sonam Tshering Lepcha (Sungdyangmu)",
     "topic": "Rong Bongtyenmu karchu aun thamlee beele path thuk",
     "narrativeType": "oral epic",
@@ -209,7 +190,7 @@
     "status": "published"
   },
   {
-    "id": "lepcha-012",
+    "id": "lepcha-011",
     "narrator": "Sonam Tshering Lepcha (Sungdyangmu)",
     "topic": "Sumu zum sa Sung aun Chum sughor sa Sung",
     "narrativeType": "oral epic",
