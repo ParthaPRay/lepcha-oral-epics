@@ -1,6 +1,6 @@
 # Lepcha Oral Epics of Sikkim — Project Website
 
-Repository-ready, no-build static website for the Indian Knowledge Forum project **“Documenting Lepcha Oral Epics and Environmental Narratives of Sikkim through Digital Recording and Knowledge Mapping.”**
+Repository-ready, no-build static website for the project **“Documenting Lepcha Oral Epics and Environmental Narratives of Sikkim through Digital Recording and Knowledge Mapping.”**
 
 The site presents the project, its objectives, the PI and intern team, an interview catalogue, an interactive Sikkim map, and a section for later publications, seminars and outreach. Site content is stored in JSON files so new material can be added without changing the layout or JavaScript.
 
