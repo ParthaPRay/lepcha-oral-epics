@@ -33,7 +33,6 @@ The project documents selected Lepcha oral epics and environmental narratives th
 
 ## Public archive
 
-- **YouTube channel:** [Indian Knowledge Forum](https://www.youtube.com/@IndianKnowledgeForum)
 - **Playlist:** [Lepcha Oral Epics of Sikkim](https://www.youtube.com/playlist?list=PLOD4VwvSJlnM)
 - **Website catalogue:** the records in `data/interviews.json`
 
@@ -41,7 +40,7 @@ The project documents selected Lepcha oral epics and environmental narratives th
 
 Each public interview record should have a stable ID, narrator's preferred public name, topic, narrative type, interviewer, media link, approved contextual note and a location suitable for public display. Store coordinates as WGS 84 latitude and longitude in decimal degrees. Mark a location as approximate when the point is generalised. Do not publish a household, sacred, ecologically sensitive or otherwise restricted location unless its disclosure is appropriate and has been approved by the relevant narrator/community and project team.
 
-The first site record is a starter: its Tashiding-area marker is approximate and its YouTube link points to the playlist. Replace both with project-verified values before presenting them as exact.
+Map locations are generalized where appropriate. The public catalogue should use direct media links when available and only locations approved for public display.
 
 ## Additional sanction particulars
 
