@@ -8,7 +8,8 @@ The site presents the project, its objectives, the PI and intern team, an interv
 
 The project URL will be:
 
-   `https://parthapray.github.io/lepcha-oral-epics/`
+   [Lepcha Oral Epics](https://parthapray.github.io/lepcha-oral-epics/)
+
 
 Open the URL and test the navigation, interview cards, video links and map. GitHub Pages may take a few minutes to publish the first version.
 
