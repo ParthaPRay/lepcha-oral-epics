@@ -8,7 +8,7 @@ A responsive, no-build GitHub Pages website for **“Documenting Lepcha Oral Epi
 2. Upload the **contents** of `Lepcha_Oral_Epics_Sikkim` to the root of your GitHub repository. Keep the `assets`, `data` and `docs` folders in place.
 3. In the repository, open **Settings → Pages**.
 4. Under **Build and deployment**, select **Deploy from a branch**, choose the branch (usually `main`) and folder `/ (root)`, then save.
-5. Wait for the deployment to finish. For a repository named `lepcha-oral-epics-sikkim`, the site URL is `https://parthapray.github.io/lepcha-oral-epics-sikkim/`.
+5. Wait for the deployment to finish. For a repository named `lepcha-oral-epics-sikkim`, the site URL is [Lepcha Oral Epics Sikkim](https://parthapray.github.io/lepcha-oral-epics-sikkim/).
 
 The site has no build step. When you later change a JSON file or add an image/audio file, commit the change; GitHub Pages republishes the site. After deployment, refresh the page. If an older version remains visible, use a hard refresh (Ctrl+F5 on Windows/Linux, Cmd+Shift+R on Mac).
 
