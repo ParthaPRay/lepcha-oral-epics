@@ -1,145 +1,153 @@
-# Lepcha Oral Epics of Sikkim — Project Website
+# Lepcha Oral Epics Sikkim — project website
 
-Repository-ready, no-build static website for the project **“Documenting Lepcha Oral Epics and Environmental Narratives of Sikkim through Digital Recording and Knowledge Mapping.”**
+A responsive, no-build GitHub Pages website for **“Documenting Lepcha Oral Epics and Environmental Narratives of Sikkim through Digital Recording and Knowledge Mapping.”** It includes the project overview, objectives, a growing media catalogue, a coordinate-based Sikkim map, narrator portraits, the intern team, and a section for future books, papers, seminars and outreach.
 
-The site presents the project, its objectives, the PI and intern team, an interview catalogue, an interactive Sikkim map, and a section for later publications, seminars and outreach. Site content is stored in JSON files so new material can be added without changing the layout or JavaScript.
+## Publish on GitHub Pages
 
-## Publish with GitHub Pages
+1. Download and unzip this package.
+2. Upload the **contents** of `Lepcha_Oral_Epics_Sikkim` to the root of your GitHub repository. Keep the `assets`, `data` and `docs` folders in place.
+3. In the repository, open **Settings → Pages**.
+4. Under **Build and deployment**, select **Deploy from a branch**, choose the branch (usually `main`) and folder `/ (root)`, then save.
+5. Wait for the deployment to finish. For a repository named `lepcha-oral-epics-sikkim`, the site URL is `https://parthapray.github.io/lepcha-oral-epics-sikkim/`.
 
-The project URL will be:
+The site has no build step. When you later change a JSON file or add an image/audio file, commit the change; GitHub Pages republishes the site. After deployment, refresh the page. If an older version remains visible, use a hard refresh (Ctrl+F5 on Windows/Linux, Cmd+Shift+R on Mac).
 
-   [Lepcha Oral Epics](https://parthapray.github.io/lepcha-oral-epics/)
+## Add an interview or recording
 
+Edit `data/interviews.json`. Add one object inside the outer `[` and `]`, with a comma between adjacent objects. Give each entry a new unique `id`. Keep names and Lepcha titles in the spelling approved for publication.
 
-Open the URL and test the navigation, interview cards, video links and map. GitHub Pages may take a few minutes to publish the first version.
+The record appears in the catalogue automatically. It appears on the map when:
 
-If you choose a different repository name, replace the last part of the URL with that exact name. This project does not require a build command, Node installation or GitHub Actions workflow.
+- Its `status` is omitted or set to `published` (records marked `draft` stay hidden).
+- `latitude` and `longitude` are numeric decimal-degree coordinates within Sikkim. Blank, missing, text, or out-of-area coordinates are not plotted.
 
-## Add an interview / video
+Records at the same generalized coordinates share one numbered map marker. Hover to preview narrator and topic; click the marker and select a record to show the full details. The map summary reports how many records were mapped and how many still need valid coordinates. Use only appropriate, narrator-approved public locations; do not publish a home or sensitive site.
 
-Edit `data/interviews.json`. Add one JSON object inside the outer square brackets for each recording. Keep commas between records and use double quotes around text. The fields used by the site are:
+### Record fields
 
-| Field | What to enter |
+| Field | Use |
 | --- | --- |
-| `id` | Unique short ID, for example `lepcha-002` |
-| `narrator` | Narrator's preferred name and spelling |
-| `topic` | Narrative or interview topic, retaining Lepcha spelling/transliteration supplied by the project |
-| `narrativeType` | For example `Oral epic`, `Environmental narrative`, or `Interview` |
-| `themes` | Short list of themes or keywords |
+| `id` | Unique ID, e.g. `lepcha-013` |
+| `narrator` | Narrator's preferred public name |
+| `topic` | Narrative title/topic |
+| `narrativeType` | e.g. `Oral epic`, `Environmental narrative`, `Oral folklore` |
+| `themes` | Array of short themes/keywords |
 | `interviewBy` | Intern/interviewer name |
-| `location` | Narrator-approved public place name |
-| `mapLabel` | Short map label; clarify if marker is approximate |
-| `latitude`, `longitude` | Decimal degrees, WGS 84 (`27.3074`, `88.2825`) |
-| `coordinatePrecision` | Use `approximate` for a generalised place marker, or `exact` only for a consented, appropriate public point |
-| `locationNote` | Context, generalisation or any caution about the point |
-| `mediaType` | `Video interview` or `Audio interview` |
-| `videoUrl` | Direct YouTube URL for the individual recording, when available |
-| `videoLinkNote` | Optional note, such as `Individual video link to be added` |
-| `contextNote` | Brief contextual information approved for public display |
-| `status` | Set to `published` to display; set to `draft` to keep a record off the page |
+| `location` | Public place name |
+| `mapLabel` | Short marker label; say if generalized |
+| `latitude`, `longitude` | Numeric WGS 84 decimal degrees, e.g. `27.307778`, `88.291111` |
+| `coordinatePrecision` | `approximate` for a generalized point, `exact` only when suitable and approved |
+| `locationNote` | Public location context/caution |
+| `mediaType` | Human-readable description, such as `Video interview` or `Audio interview` |
+| `media` | Optional array of video links, local audio, and photographs; see examples below |
+| `videoUrl` | Optional direct YouTube video or playlist URL (legacy field supported) |
+| `audioUrl` | Optional local audio path (legacy field supported) |
+| `photoUrl` / `imageUrl` | Optional local image path (legacy field supported) |
+| `contextNote` | Brief approved context for the record |
+| `status` | `published` or `draft`; defaults to published if omitted |
 
-The initial catalogue entry is a starter based on information supplied for the project. It points to the project playlist because an individual video URL was not available when this repository was prepared. Replace the playlist link with the direct video link when you have it. Its marker is an approximate Tashiding-area reference, not a precise interview site. Confirm or replace the marker before presenting it as an exact location.
+### YouTube video
 
-Example of the shape for a new record (replace the sample values):
+Use the direct video link when one exists. Keep the playlist link for the site-wide playlist button, not as a substitute for an individual video link.
 
 ```json
 {
-  "id": "lepcha-002",
-  "narrator": "Narrator's preferred name",
-  "topic": "Narrative or episode title",
+  "id": "lepcha-013",
+  "narrator": "Narrator name",
+  "topic": "Narrative title",
   "narrativeType": "Oral epic",
-  "themes": ["theme one", "theme two"],
+  "themes": ["oral narrative"],
   "interviewBy": "Intern name",
   "location": "Public place name, Sikkim",
-  "mapLabel": "Generalised location",
-  "latitude": 27.0000,
-  "longitude": 88.0000,
+  "mapLabel": "Generalized village-area point",
+  "latitude": 27.307778,
+  "longitude": 88.291111,
   "coordinatePrecision": "approximate",
-  "locationNote": "Generalised area point; exact site not shown.",
+  "locationNote": "Generalized public map point; not an exact interview site.",
   "mediaType": "Video interview",
-  "videoUrl": "https://www.youtube.com/watch?v=VIDEO_ID",
-  "videoLinkNote": "",
+  "media": [
+    {"type": "video", "url": "https://www.youtube.com/watch?v=VIDEO_ID", "label": "Watch interview ↗"}
+  ],
   "contextNote": "Short narrator-approved note.",
   "status": "published"
 }
 ```
 
-### Map behaviour
+### Add audio or photographs to a catalogue record
 
-- Hover over a location marker to see the narrator and topic.
-- Click a marker to open its map popup and load the full record in the “Selected story” panel.
-- Use **View on map** on an interview card to jump to its marker.
-- To omit a location from the map, remove `latitude` and `longitude` from that record. The catalogue entry will still display.
-- Coordinates must be latitude/longitude in decimal degrees. The Leaflet map uses OpenStreetMap tiles and shows a Sikkim-centred view.
+Upload files using **Add file → Upload files**. Keep audio in `assets/media/` and record photographs in `assets/media/` (or create another folder under `assets/`). Use paths relative to the repository root, without a leading slash. Add media entries to the same record; the page will show a player for audio and an image for photographs.
 
-## Add intern or PI photos
+```json
+"media": [
+  {"type": "video", "url": "https://www.youtube.com/watch?v=VIDEO_ID", "label": "Watch interview ↗"},
+  {"type": "audio", "url": "assets/media/lepcha-story.mp3", "label": "Audio interview"},
+  {"type": "photo", "url": "assets/media/field-session.jpg", "alt": "Narrator sharing a story", "caption": "Field documentation photograph"}
+]
+```
 
-The PI portrait currently links to the image already published on Partha Pratim Ray's personal website. Intern portrait files were not included with the website brief, so their cards use initials until the correct images are supplied.
+Audio and images are served from GitHub Pages. Keep file sizes reasonable and confirm you have permission to publish recordings and photographs.
 
-1. Obtain each person's approval to publish their portrait on the project website.
-2. Add a reasonably sized JPG or WebP file to `assets/team/`, for example `pundimit-lepcha.jpg`.
-3. In `data/team.json`, set that person's `photo` value to `assets/team/pundimit-lepcha.jpg`.
-4. Check `photoAlt` contains their name, then commit the change. The initials will be replaced by the photo automatically.
+## Add narrator portraits
 
-Do not use generated look-alike portraits or another narrator's photograph as an intern's image.
+The **People behind the documentation → Narrators** section automatically lists each distinct narrator named in `data/interviews.json`. To show a portrait:
 
-## Add a book, paper, seminar or outreach activity
+1. Confirm the narrator approves public display of the portrait.
+2. Upload the image to `assets/narrators/`, for example `assets/narrators/sonam-tshering-lepcha.jpg`.
+3. Add or update that narrator in `data/narrators.json`:
 
-Edit `data/activities.json` and add one object for each confirmed output or activity:
+```json
+{
+  "name": "Sonam Tshering Lepcha (Sungdyangmu)",
+  "photo": "assets/narrators/sonam-tshering-lepcha.jpg",
+  "photoAlt": "Portrait of Sonam Tshering Lepcha (Sungdyangmu)",
+  "note": "Optional short approved description."
+}
+```
+
+Without a portrait, the narrator still appears with an initials placeholder. A new narrator's gallery card is created from `interviews.json`; add their photo details to `narrators.json` when ready.
+
+## Add intern portraits
+
+Upload approved JPG, PNG or WebP photos to `assets/team/` and update the matching intern's `photo` value in `data/team.json`, e.g. `assets/team/pundimit-lepcha.jpg`. The site uses initials until a photo path is supplied. The PI profile is also configured in `data/team.json`.
+
+## Add books, papers, seminars or outreach
+
+Add confirmed items to `data/activities.json`. Activity images are optional and appear in the activity card when an image path or image URL is supplied. Upload local images to `assets/activities/`.
 
 ```json
 {
   "type": "Seminar",
   "title": "Seminar title",
   "date": "2026-11-15",
-  "description": "One or two sentences describing the activity.",
+  "description": "Short description.",
   "contributors": "Names or project team",
-  "url": "https://example.org/event"
+  "url": "https://example.org/event",
+  "image": "assets/activities/seminar.jpg",
+  "imageAlt": "Participants at the seminar",
+  "imageCaption": "Project seminar, Gangtok"
 }
 ```
 
-`type` can be `Book`, `Paper`, `Seminar`, `Outreach`, `Exhibition`, `Workshop`, or another clear label. Omit `url` if there is no public page. Add only confirmed items.
+## Check JSON before committing
 
-## Update the site after publishing
-
-For a simple update in GitHub's website:
-
-1. Open the relevant file in the repository, such as `data/interviews.json`.
-2. Choose the pencil icon, make the change, and select **Commit changes**.
-3. GitHub Pages rebuilds the site automatically. Refresh the site after the deployment completes.
-
-For a photo, use **Add file → Upload files** to add the image first, then update `data/team.json` with its path.
-
-If you prefer a local preview before committing, run a small web server from this folder:
+A missing comma or unmatched quote can stop the catalogue from loading. From a local copy of the site, run:
 
 ```bash
+python -m json.tool data/interviews.json
+python -m json.tool data/narrators.json
+python -m json.tool data/team.json
+python -m json.tool data/activities.json
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`. A local server is needed because the page loads its JSON records with `fetch()`.
+Then open `http://localhost:8000`. A local web server is required because the page loads JSON with `fetch()`; opening `index.html` directly as a file will not work correctly.
 
-## Project details
+## Project information
 
 - **Funding agency:** Indian Knowledge Systems Division, Ministry of Education, Government of India
 - **Principal Investigator:** Partha Pratim Ray, Department of Computer Applications, Sikkim University
-- **YouTube channel:** [Indian Knowledge Forum](https://www.youtube.com/@IndianKnowledgeForum)
 - **Playlist:** [Lepcha Oral Epics of Sikkim](https://www.youtube.com/playlist?list=PLOD4VwvSJlnM)
 
-## Map and web attributions
+## Attribution
 
-- Map tiles © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), used through the OpenStreetMap standard tile service and Leaflet.
-- Leaflet is distributed under the BSD 2-Clause License: [leafletjs.com](https://leafletjs.com/).
-- The first generalised Tashiding-area coordinate is a display anchor only, not a verified recording coordinate. Review it with the project team and use narrator-approved locations before treating it as precise.
-
-## Repository contents
-
-```text
-index.html                 Main site
-assets/css/site.css        Layout and design
-assets/js/app.js           Catalogue, map and filtering behaviour
-assets/team/               Add approved team portraits here
-data/interviews.json       Narrators, interview metadata, links and coordinates
-data/team.json             PI and intern details and image paths
-data/activities.json       Books, papers, seminars and outreach
-docs/project-record.md    Funder-facing project record and objectives
-```
+Map tiles © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), displayed with [Leaflet](https://leafletjs.com/) (BSD 2-Clause License).
