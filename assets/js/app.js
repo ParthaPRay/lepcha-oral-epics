@@ -148,7 +148,7 @@ function addMapMarkers(records) {
     const place = first.record.mapLabel || first.record.location || "Sikkim";
     const markerIcon = L.divIcon({
       className: "map-count-icon",
-      html: `<span aria-hidden="true">${entries.length > 1 ? entries.length : "•"}</span>`,
+      html: `<span aria-hidden="true">${entries.length}</span>`,
       iconSize: [32, 32],
       iconAnchor: [16, 16]
     });
