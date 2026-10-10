@@ -12,7 +12,7 @@
   "interns": [
     {"name":"Pundimit Lepcha","role":"Project Intern","photo":"assets/images/PundimitLepcha.jpeg","photoAlt":"Portrait of Pundimit Lepcha","interviewBy":"Pundimit Lepcha"},
     {"name":"Phur Tshering Lepcha","role":"Project Intern","photo":"assets/images/PhurTsheringLepcha.jpeg","photoAlt":"Portrait of Phur Tshering Lepcha","interviewBy":"Phur Tshering Lepcha"},
-    {"name":"Lha Tshering Lepcha","role":"Project Intern","photo":"","photoAlt":"Portrait of Lha Tshering Lepcha","interviewBy":"Lha Tshering Lepcha"},
+    {"name":"Lha Tshering Lepcha","role":"Project Intern","photo":"assets/images/LhaTsheringLepcha.jpg","photoAlt":"Portrait of Lha Tshering Lepcha","interviewBy":"Lha Tshering Lepcha"},
     {"name":"Yongmit Lepcha","role":"Project Intern","photo":"assets/images/YongmitLepcha.jpeg","photoAlt":"Portrait of Yongmit Lepcha","interviewBy":"Yongmit Lepcha"}
   ]
 }
