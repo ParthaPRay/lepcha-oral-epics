@@ -22,6 +22,18 @@
     "photo": "assets/images/Dukda%20Lepcha%20(Bongthing).jpg",
     "photoAlt": "Portrait of Dukda Lepcha (Bongthing)",
     "note": ""
+  },
+  {
+    "name": "Nimpincho Lepcha (Bongthing)",
+    "photo": "assets/images/NimpinchoLepcha(Bongthing).png",
+    "photoAlt": "Portrait of Nimpincho Lepcha (Bongthing)",
+    "note": ""
+  },
+  {
+    "name": "Pem Ihanmu Lepcha (Mun)",
+    "photo": "assets/images/PemIhanmuLepcha(Mun).png",
+    "photoAlt": "Portrait of Pem Ihanmu Lepcha (Mun)",
+    "note": ""
   }
 ]
 
